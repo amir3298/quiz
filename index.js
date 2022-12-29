@@ -49,34 +49,40 @@ const inputData = [
     }
 ]
 
-// return names of the people as an array who are older than 25
+// return names of the people as an array who are older than 25 ///
 const peopleOver25 = (data) => {
-    ///
+    
+    return inputData.filter(item => item.age > 25).map(item => item.name)
 }
 
-// return names of the people as an array who aretaking english
+// return names of the people as an array who aretaking english ///
 const peopleTakingEnglish = (data) => {
-    ///
+    
+        return inputData.filter(item => item.course.includes('English')).map(item => item.name)
 }
 
-// return names of the people as an array who are taking english AND science at the same time
+// return names of the people as an array who are taking english AND science at the same time ///
 const peopleTakingMathAndScience = (data) => {
-    ///
+    
+    return inputData.filter(item => item.course.includes('Math') && item.course.includes('Science')).map(item => item.name)
 }
 
-// return names of the people as an array who are taking either english OR History at the same time
+// return names of the people as an array who are taking either english OR History at the same time ///
 const peopleTakingSpanishORHistory = (data) => {
-    ///
+    
+        return inputData.filter(item => item.course.includes('Spanish') || item.course.includes('History')).map(item => item.name)
 }
 
-// return names of the male people as an array who are taking Math
+// return names of the male people as an array who are taking Math ///
 const malesTakingMath = (data) => {
-    ///
+    
+        return inputData.filter(item => item.course.includes('Math') && item.gender=== 'male').map(item => item.name)
 }
 
-// return names of the all females who are older than 25
+// return names of the all females who are older than 25 ///
 const fermalesTakingMath = (data) => {
-    ///
+    
+    return inputData.filter(item => item.age > 25 && item.gender.includes('female')).map(item => item.name)
 }
 
 // return courses of Sarah
